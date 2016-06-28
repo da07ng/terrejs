@@ -1,0 +1,38 @@
+{
+  "name": "terre",
+  "version": "0.0.1",
+  "description": "The Language of Map",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "node build/build.js",
+    "dev": "rollup -c build/rollup.config.js -w",
+    "test": "karma start build/karma.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/da07ng/terre.git"
+  },
+  "keywords": [
+    "terre",
+    "map"
+  ],
+  "author": "Daojing Gao <me@gaodaojing.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/da07ng/terre/issues"
+  },
+  "homepage": "https://github.com/da07ng/terre#readme",
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.1.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "rollup": "^0.33.0",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-watch": "^2.4.0",
+    "uglify-js": "^2.6.4"
+  }
+}
