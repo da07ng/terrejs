@@ -5,7 +5,7 @@
   "main": "dist/terre.umd.js",
   "module": "dist/terre.es5.js",
   "scripts": {
-    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'",
     "build": "tsc && rollup -c scripts/rollup.config.js",
     "test": "jest",
     "precommit": "lint-staged"
@@ -39,7 +39,7 @@
   },
   "lint-staged": {
     "*.ts": [
-      "prettier --write 'src/**/*.ts'",
+      "prettier --write",
       "git add"
     ]
   }
