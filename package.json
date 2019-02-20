@@ -1,0 +1,46 @@
+{
+  "name": "terrejs",
+  "version": "0.0.1",
+  "description": "The Language of Map",
+  "main": "dist/terre.umd.js",
+  "module": "dist/terre.es5.js",
+  "scripts": {
+    "build": "tsc && rollup -c scripts/rollup.config.js",
+    "test": "jest",
+    "precommit": "lint-staged",
+    "lint": "tslint -c tslint.json src/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/locationland/terrejs.git"
+  },
+  "author": "da07ng <me@gaodaojing.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/locationland/terrejs/issues"
+  },
+  "homepage": "https://github.com/locationland/terrejs#readme",
+  "devDependencies": {
+    "husky": "^1.3.1",
+    "jest": "^24.1.0",
+    "lint-staged": "^8.1.4",
+    "prettier": "1.16.4",
+    "rollup": "^1.2.2",
+    "rollup-plugin-typescript2": "^0.19.2",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.3.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "prettier --write src/**/*.ts",
+      "git add"
+    ]
+  }
+}

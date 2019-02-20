@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "tslint-config-standard",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "semicolon": [
+      true,
+      "always"
+    ],
+    "space-before-function-paren": [
+      true,
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ]
+  }
+}
