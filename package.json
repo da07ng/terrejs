@@ -5,10 +5,10 @@
   "main": "dist/terre.umd.js",
   "module": "dist/terre.es5.js",
   "scripts": {
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "build": "tsc && rollup -c scripts/rollup.config.js",
     "test": "jest",
-    "precommit": "lint-staged",
-    "lint": "tslint -c tslint.json src/**/*.ts"
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -38,8 +38,8 @@
     }
   },
   "lint-staged": {
-    "{src,test}/**/*.ts": [
-      "prettier --write src/**/*.ts",
+    "*.ts": [
+      "prettier --write 'src/**/*.ts'",
       "git add"
     ]
   }
