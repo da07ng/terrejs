@@ -7,7 +7,8 @@ export default {
   output: [
     {
       file: pkg.main,
-      format: 'cjs',
+      name: 'terre',
+      format: 'umd',
     },
     {
       file: pkg.module,
